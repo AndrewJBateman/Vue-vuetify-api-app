@@ -1,4 +1,3 @@
-/* eslint-disable */
 <template>
   <div class="hello">
 		<v-btn :to="{ name: 'Products' }" color="info">Products</v-btn>

@@ -1,10 +1,9 @@
 <template lang="html">
 	<v-layout row wrap>
-    <v-flex xs4 v-for="product in products" :key="product.id">
+    <v-flex xs12 md4 v-for="product in products" :key="product.id">
       <v-card>
-        <v-card-media :src="product.image" height="200px">
+        <v-card-media :src="product.image" height="400px">
 				</v-card-media>
-
         <v-card-title primary-title>
           <div>
             <h3 class="headline mb-0">{{product.title}}</h3>
@@ -17,7 +16,9 @@
           <v-btn
 						:to="{
 							name: 'Product',
-
+							params: {
+								id:	product.id
+							}
 						}"
 						flat 
 						color="orange">View</v-btn>
@@ -33,7 +34,7 @@ import API from '@/lib/API';
 export default {
 	data() {
 		return {
-			products: []
+			products: [],
 		};
 	},
 	mounted() {
@@ -43,10 +44,10 @@ export default {
 		load() {
 			API.getProducts()
 			.then((products) => {
-				this.products = products
+				this.products = products;
 			});
 		},
-	}
+	},
 }
 </script>
 

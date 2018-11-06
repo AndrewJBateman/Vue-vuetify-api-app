@@ -21,15 +21,25 @@ export default {
 			},
 		};
 	},
+	mounted() {
+		const { id } = this.$route.params;
+		this.load(id);
+	},
 	methods: {
+		load(id) {
+			API.getProduct(id)
+				.then((product) => {
+					this.product = product;
+				});
+		},
 		submit() {
 			this.product.quantity = Number(this.product.quantity);
-			API.createProduct(this.product)
-			.then(({ id }) => {
-				this.$router.push({
+			API.updateProduct(this.product.id, this.product)
+				.then(() => {
+					this.$router.push({
 					name: 'Product',
 					params: {
-						id,
+						id: this.product.id,
 					},
 				}); //end this
 			}); //end then

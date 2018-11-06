@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Landing from '@/components/Landing';
 import Products from '@/components/Products';
 import Create from '@/components/Create';
+import Edit from '@/components/Edit';
 
 Vue.use(Router);
 
@@ -27,6 +28,11 @@ export default new Router({
       path: '/products/:id',
       name: 'Product',
       component: Product,
+		},
+		{
+      path: '/products/:id/edit',
+      name: 'Edit',
+      component: Edit,
 		},
   ],
 });

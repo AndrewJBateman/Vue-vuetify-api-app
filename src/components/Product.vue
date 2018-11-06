@@ -4,7 +4,6 @@
       <v-card>
         <v-card-media :src="product.image" height="200px">
 				</v-card-media>
-
         <v-card-title primary-title>
           <div>
             <h3 class="headline mb-0">{{product.title}}</h3>
@@ -13,7 +12,6 @@
 						<small>{{product.quantity}} in stock</small>
           </div>
         </v-card-title>
-
         <v-card-actions>
           <v-btn
 						:to="{
@@ -22,8 +20,8 @@
 								id: product.id
 							}
 						}"
-						flat
 						color="primary">Edit</v-btn>
+					<v-btn @click="deleteProduct()" color="error">Delete</v-btn>
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -36,22 +34,34 @@ import API from '@/lib/API';
 export default {
 	data() {
 		return {
-			product: {},
+			product: {
+				id: -1
+			},
 		};
 	},
 	mounted() {
 		const { id } = this.$route.params;
-		console.log(id);
+		this.load(id);
 	},
 	methods: {
-		load() {
+		load(id) {
 			API.getProduct(id)
 			.then((product) => {
 				this.product = product;
-			})
+			});
+		},
+		deleteProduct() {
+			const { id } = this.$route.params;
+
+			API
+				.deleteProduct(id)
+				.then(() => {
+					this.$router.push({
+						name: 'Products',
+					});
+				});
 		},
 	},
-
 };
 </script>
 
