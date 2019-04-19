@@ -1,18 +1,21 @@
 <template lang="html">
 <v-layout>
 	<v-flex xs12>
-		<v-form ref="form" v-model="valid">
+		<v-form 
+			ref="form" 
+			v-model="valid"
+			lazy-validation
+		>
     <v-text-field
 		  label="Title"
       v-model="product.title"
 			:rules="titleRules"
 	    required
     ></v-text-field>
-		<v-text-field
+		<v-textarea
 		  label="Description"
       v-model="product.description"
-			multi-line
-    ></v-text-field>
+    ></v-textarea>
 		<v-text-field
 		  label="Price"
       v-model="product.price"

@@ -10,7 +10,7 @@ export default {
 	components: {
 		ProductForm,
 	},
-	data() {
+  data() {
 		return {
 			product: {
 				title: '',

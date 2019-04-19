@@ -13,14 +13,10 @@
           </div>
         </v-card-title>
         <v-card-actions>
-          <v-btn
-						:to="{
-							name: 'Edit',
-							params: {
-								id: product.id
-							}
-						}"
-						color="primary">Edit</v-btn>
+          <v-btn 
+						:to="{name: 'Edit', params: {id: product.id}}"
+						color="primary">Edit
+					</v-btn>
 					<v-btn @click="deleteProduct()" color="error">Delete</v-btn>
         </v-card-actions>
       </v-card>
@@ -48,7 +44,8 @@ export default {
 			API.getProduct(id)
 			.then((product) => {
 				this.product = product;
-			});
+			}
+			);
 		},
 		deleteProduct() {
 			const { id } = this.$route.params;

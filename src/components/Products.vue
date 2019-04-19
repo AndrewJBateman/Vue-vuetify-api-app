@@ -1,6 +1,6 @@
 <template lang="html">
 	<v-layout row wrap>
-    <v-flex xs12 md4 v-for="product in products" :key="product.id">
+    <v-flex xs4 v-for="product in products" :key="product.id">
       <v-card>
         <v-card-media :src="product.image" height="400px">
 				</v-card-media>
@@ -20,7 +20,7 @@
 								id:	product.id
 							}
 						}"
-						flat 
+						flat
 						color="orange">View</v-btn>
         </v-card-actions>
       </v-card>

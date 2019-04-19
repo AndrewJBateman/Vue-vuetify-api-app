@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-		<v-btn :to="{ name: 'Products' }" color="info">Products</v-btn>
+    <v-btn :to="{ name: 'Products' }" color="info">Products</v-btn>
   </div>
 </template>
 
