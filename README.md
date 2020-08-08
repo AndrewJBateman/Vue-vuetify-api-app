@@ -1,6 +1,6 @@
 # :zap: Vue Vuetify Forms
 
-* App using the Vue.js + vuetify material design framework to display data
+* App using the Vue.js + vuex material design framework to display data
 
 **Note:** to open web links in a new window use: _ctrl+click on link_
 
@@ -31,10 +31,11 @@
 * [Vue framework v2.6](https://vuejs.org/)
 * [vuex v3](https://vuex.vuejs.org/)
 * [Vue DevTools extension for Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) was useful for debugging and seeing what was happening with the state when Vuex was used.
+* [Electron](https://www.electronjs.org/) to build a cross-platform desktop app.
 
 ## :floppy_disk: Setup
 
-Run `npm run serve` then navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
+* For a dev server: run `npm run electron:serve` then navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
 
 ## :computer: Code Examples
 
