@@ -1,92 +1,66 @@
-# Vue Vuetify Crud App
+# :zap: Vue Vuetify Forms
 
-App using the Vue.js + vuetify material design framework to built a CRUD client
+* App using the Vue.js + vuetify material design framework to create forms with validation
 
 **Note:** to open web links in a new window use: _ctrl+click on link_
 
-## Table of contents
+## :page_facing_up: Table of contents
 
-- [General info](#general-info)
-- [Screenshots](#screenshots)
-- [Technologies](#technologies)
-- [Setup](#setup)
-- [Features](#features)
-- [Status](#status)
-- [Inspiration](#inspiration)
-- [Contact](#contact)
+* [:zap: Vue Vuetify Forms](#zap-vue-vuetify-forms)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
+  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:envelope: Contact](#envelope-contact)
 
-## General info
+## :books: General info
 
-- This tutorial project creates a simple store where products can be created using Vue forms. Products are displayed and can be edited and deleted.
+* tba
 
-## Screenshots
+## :camera: Screenshots
 
 ![Example screenshot](./img/create-product-page.png).
 
-## Technologies
+## :signal_strength: Technologies
 
-- [Vue framework v2.6.10](https://vuejs.org/)
+* [Vue framework v2.6.10](https://vuejs.org/)
+* [Vue Router v3.0.6](https://router.vuejs.org/) the official router for Vue.js
+* [Vue CLI v3.6.0](https://github.com/vuejs/vue-cli)
+* [Vuetify Material Design Component Framework v1.5.12](https://vuetifyjs.com/en/)
+* [Vuelidate v0.7.3 model-based validation](https://vuelidate.netlify.com/)
+* [ezFetch v1.2.0](https://www.npmjs.com/package/ez-fetch) tech wrapper to simplify network requests.
+* [Vue DevTools extension for Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) was useful for debugging and seeing what was happening with the state when Vuex was used.
 
-- [Vue Router v3.0.6](https://router.vuejs.org/) the official router for Vue.js
-
-- [Vue CLI v3.6.0](https://github.com/vuejs/vue-cli)
-
-- [Vuetify Material Design Component Framework v1.5.12](https://vuetifyjs.com/en/)
-
-- [Vuelidate v0.7.3 model-based validation](https://vuelidate.netlify.com/)
-
-- [ezFetch v1.2.0](https://www.npmjs.com/package/ez-fetch) tech wrapper to simplify network requests.
-
-- [Vue DevTools extension for Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) was useful for debugging and seeing what was happening with the state when Vuex was used.
-
-## Setup
+## :floppy_disk: Setup
 
 Run `npm run serve` then navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
 
-## Code Examples
+## :computer: Code Examples
 
-- use of [ezFetch](https://www.npmjs.com/package/ez-fetch) in API.js file
+* tba
 
 ```javascript
 
-import ezFetch from 'ez-fetch';
-
-const API_URL = 'https://localhost:3000/api/v1/products';
-
-export default {
-  getProducts() {
-    return ezFetch.get(API_URL);
-  },
-  getProduct(id) {
-    return ezFetch.get(`${API_URL}/${id}`);
-  },
-  createProduct(product) {
-    return ezFetch.post(API_URL, product);
-  },
-  updateProduct(id, product) {
-    return ezFetch.put(`${API_URL}/${id}`, product);
-  },
-  deleteProduct(id) {
-    return ezFetch.delete(`${API_URL}/${id}`);
-  },
-};
-
 ```
 
-## Features
+## :cool: Features
 
-- create, read, update and delete (CRUD) products.
+* create, read, update and delete (CRUD) products.
 
-## Status & To-Do List
+## :clipboard: Status & To-Do List
 
-- Status: App runs on dev server. Form validation not working
+* Status: App runs on dev server. Form validation not working
+* To-Do: Update form validation to latest vue methods. Conside linking to an external database.
 
-- To-Do: Update form validation to latest vue methods. Conside linking to an external database.
+## :clap: Inspiration
 
-## Inspiration
+* [Working With Vuetify Forms and Validation)"](https://www.youtube.com/watch?v=HkKutWgQXU8)
 
-- [Code Garden Youtube video: "Intro and Overview of Vuetify.js (Build a CRUD client with Vue.js)"](https://www.youtube.com/watch?v=5GfpGaHKfyo)
+## :envelope: Contact
 
-## Contact
-
-Created by [ABateman](https://www.andrewbateman.org) - feel free to contact me!!!
+* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)

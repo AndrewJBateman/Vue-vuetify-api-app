@@ -1,72 +1,32 @@
 <template>
-  <v-app id="inspire">
-    <v-navigation-drawer
-		  fixed
-      v-model="drawer"
-      app>
-      <v-list dense>
-        <v-list-tile :to="{ name: 'Products' }">
-          <v-list-tile-action>
-            <v-icon>view_list</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>
-							Products
-						</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-
-				<v-list-tile :to="{ name: 'Create' }">
-          <v-list-tile-action>
-            <v-icon>view_list</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            <v-list-tile-title>
-							Create Product
-						</v-list-tile-title>
-          </v-list-tile-content>
-        </v-list-tile>
-
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-toolbar color="indigo" dark fixed app>
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-toolbar-title>Andrews Products</v-toolbar-title>
-    </v-toolbar>
-
-    <v-content>
-      <v-container fluid fill-height>
-        <v-layout>
-          <router-view></router-view>
-        </v-layout>
-      </v-container>
-    </v-content>
-
-    <v-footer color="indigo" app>
-      <span class="white--text">&copy; 2018</span>
-    </v-footer>
-  </v-app>
+  <div id="app">
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
+  </div>
 </template>
-
-<script>
-export default {
-	name: 'App',
-	data() {
-		return {
-			drawer: true,
-		};
-	},
-};
-</script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
