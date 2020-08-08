@@ -51,9 +51,8 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: App runs on dev server.
-* To-Do: [Drawer](https://stackoverflow.com/questions/57029493/bind-drawer-state-in-vuetify-when-nav-drawer-and-app-bar-is-different-components) & catch errors to fix
-* [add dotenv](https://stackoverflow.com/questions/50715302/how-to-use-dotenv-with-vue-js)
+* Status: Working on dev server
+* To-Do: Add icons
 
 ## :clap: Inspiration
 

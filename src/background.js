@@ -19,6 +19,8 @@ function createWindow() {
   win = new BrowserWindow({
     width: 800,
     height: 600,
+    title: "News App",
+    // icon: path.join(__static, "icon.png"),
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
