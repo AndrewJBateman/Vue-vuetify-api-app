@@ -1,6 +1,6 @@
 # :zap: Vue Vuetify Forms
 
-* App using the Vue.js + vuetify material design framework to create forms with validation
+* App using the Vue.js + vuetify material design framework to display data
 
 **Note:** to open web links in a new window use: _ctrl+click on link_
 
@@ -24,16 +24,12 @@
 
 ## :camera: Screenshots
 
-![Example screenshot](./img/create-product-page.png).
+![Example screenshot](./img/.png).
 
 ## :signal_strength: Technologies
 
-* [Vue framework v2.6.10](https://vuejs.org/)
-* [Vue Router v3.0.6](https://router.vuejs.org/) the official router for Vue.js
-* [Vue CLI v3.6.0](https://github.com/vuejs/vue-cli)
-* [Vuetify Material Design Component Framework v1.5.12](https://vuetifyjs.com/en/)
-* [Vuelidate v0.7.3 model-based validation](https://vuelidate.netlify.com/)
-* [ezFetch v1.2.0](https://www.npmjs.com/package/ez-fetch) tech wrapper to simplify network requests.
+* [Vue framework v2.6](https://vuejs.org/)
+* [vuex v3](https://vuex.vuejs.org/)
 * [Vue DevTools extension for Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) was useful for debugging and seeing what was happening with the state when Vuex was used.
 
 ## :floppy_disk: Setup
@@ -50,16 +46,17 @@ Run `npm run serve` then navigate to `http://localhost:8080/`. The app will auto
 
 ## :cool: Features
 
-* create, read, update and delete (CRUD) products.
+* tba
 
 ## :clipboard: Status & To-Do List
 
-* Status: App runs on dev server. Form validation not working
-* To-Do: Update form validation to latest vue methods. Conside linking to an external database.
+* Status: App runs on dev server.
+* To-Do: [Drawer](https://stackoverflow.com/questions/57029493/bind-drawer-state-in-vuetify-when-nav-drawer-and-app-bar-is-different-components) & catch errors to fix
+* [add dotenv](https://stackoverflow.com/questions/50715302/how-to-use-dotenv-with-vue-js)
 
 ## :clap: Inspiration
 
-* [Working With Vuetify Forms and Validation)"](https://www.youtube.com/watch?v=HkKutWgQXU8)
+* tba
 
 ## :envelope: Contact
 
