@@ -1,5 +1,7 @@
 "use strict"
-// import path from "path"
+/* global __static */
+// import path
+import path from "path"
 import { app, protocol, BrowserWindow } from "electron"
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib"
 import installExtension, { VUEJS_DEVTOOLS } from "electron-devtools-installer"
@@ -20,13 +22,14 @@ function createWindow() {
     width: 800,
     height: 600,
     title: "News App",
-    // icon: path.join(__static, "icon.png"),
+    icon: path.join(__static, "icon.png"),
     webPreferences: {
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
       nodeIntegration: process.env.ELECTRON_NODE_INTEGRATION,
     },
   })
+  win.on("page-title-updated", event => event.preventDefault())
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     // Load the url of the dev server if in development mode

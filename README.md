@@ -21,6 +21,10 @@
 ## :books: General info
 
 * `.prettierrc` file added to configure Prettier settings
+* BEM —Block, Element, Modifier — CSS methodology used:
+_* `.block { ... }` represent a component. They’re standalone entities and are meaningful on their own.
+* `.block__element { ... }` parts of a .block. They have no standalone meaning and must be tied to a block.
+* `.block--modifier { ... }` used as flags on blocks or elements. We can use them to change the appearance, behavior, or state of elements. For example, to use a hidden flag, we could say `.block--hidden`._
 
 ## :camera: Screenshots
 
@@ -38,6 +42,7 @@
 ## :floppy_disk: Setup
 
 * For a dev server: run `npm run electron:serve` then navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
+* To crete WINDOWS build file: run `npm electron:build -- --win nsis`
 
 ## :computer: Code Examples
 
@@ -49,17 +54,12 @@
 
 ## :cool: Features
 
-* BEM —Block, Element, Modifier — CSS methodology used:
-_* `.block { ... }` represent a component. They’re standalone entities and are meaningful on their own.
-* `.block__element { ... }` parts of a .block. They have no standalone meaning and must be tied to a block.
-* `.block--modifier { ... }` used as flags on blocks or elements. We can use them to change the appearance, behavior, or state of elements. For example, to use a hidden flag, we could say `.block--hidden`._
-
-* API key hidden from Github repo using .env - included in Vue; npm dotenv not required!
+* API key hidden from Github repo using .env - included in Vue; in Vue 2 npm dotenv was required
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working on dev server
-* To-Do: Add icons, change random country for user country using apapi API
+* To-Do: add day.js frmatting of date, change random country for user country using apapi API
 
 ## :clap: Inspiration
 

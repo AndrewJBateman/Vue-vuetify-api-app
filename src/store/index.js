@@ -38,7 +38,7 @@ const store = new Vuex.Store({
   },
   mutations: {},
   actions: {
-    async getTopNews(context, country) {
+    async getNews(context, country) {
       let res = await axios({
         url: `/top-headlines?country=${country}`,
         method: "GET",
