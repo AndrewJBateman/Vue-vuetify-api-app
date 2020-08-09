@@ -7,7 +7,6 @@
         </a>
       </h1>
       <h3 class="news__author" v-if="article.author">{{ article.author }}</h3>
-      <!-- <p class="article__paragraph">{{ article.description }}</p> -->
       <h5 class="article__published">{{ new Date(article.publishedAt) }}</h5>
     </div>
     <div class="image__container">
@@ -33,8 +32,7 @@ export default {
     lazyLoadImages() {
       const images = document.querySelectorAll(".news__img")
       const options = {
-        // If the image gets within 50px in the Y axis, start the download.
-        root: null, // Page as root
+        root: null,
         rootMargin: "0px",
         threshold: 0.1,
       }
@@ -59,7 +57,6 @@ export default {
           }
         })
       }
-      // The observer for the images on the page
       const observer = new IntersectionObserver(handleIntersection, options)
       images.forEach(img => {
         observer.observe(img)
@@ -99,6 +96,10 @@ export default {
 .article__published {
   text-align: left;
 }
+.article__link {
+  text-decoration: none;
+  color: inherit;
+}
 .image__container {
   width: 100%;
   max-width: 180px;
@@ -113,9 +114,5 @@ export default {
 .news__img:hover {
   max-width: 180px;
   max-height: 180px;
-}
-.article__link {
-  text-decoration: none;
-  color: inherit;
 }
 </style>

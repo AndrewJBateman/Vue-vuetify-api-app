@@ -20,7 +20,7 @@
 
 ## :books: General info
 
-* tba
+* `.prettierrc` file added to configure Prettier settings
 
 ## :camera: Screenshots
 
@@ -31,7 +31,9 @@
 * [Vue framework v2.6](https://vuejs.org/)
 * [vuex v3](https://vuex.vuejs.org/)
 * [Vue DevTools extension for Chrome](https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) was useful for debugging and seeing what was happening with the state when Vuex was used.
-* [Electron](https://www.electronjs.org/) to build a cross-platform desktop app.
+* [Electron](https://www.electronjs.org/) to build a cross-platform **desktop** app.
+* [Vue CLI Plugin Electron Builder](https://nklayman.github.io/vue-cli-plugin-electron-builder/) to build a Vue.js App For Desktop With Electron
+* [Axios v0.19.2](https://www.npmjs.com/package/axios) promise based HTTP client for the browser and node.js
 
 ## :floppy_disk: Setup
 
@@ -47,12 +49,17 @@
 
 ## :cool: Features
 
-* tba
+* BEM —Block, Element, Modifier — CSS methodology used:
+_* `.block { ... }` represent a component. They’re standalone entities and are meaningful on their own.
+* `.block__element { ... }` parts of a .block. They have no standalone meaning and must be tied to a block.
+* `.block--modifier { ... }` used as flags on blocks or elements. We can use them to change the appearance, behavior, or state of elements. For example, to use a hidden flag, we could say `.block--hidden`._
+
+* API key hidden from Github repo using .env - included in Vue; npm dotenv not required!
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working on dev server
-* To-Do: Add icons
+* To-Do: Add icons, change random country for user country using apapi API
 
 ## :clap: Inspiration
 

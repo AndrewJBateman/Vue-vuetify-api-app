@@ -25,18 +25,18 @@ export default {
     NewsCard,
   },
   mounted() {
-    this.fetchTopNews()
+    this.fetchNews()
   },
   computed: {
     ...mapState(["countries"]),
   },
   methods: {
-    ...mapActions(["getTopNews"]),
-    async fetchTopNews() {
+    ...mapActions(["getNews"]),
+    async fetchNews() {
       let countriesLength = this.countries.length
       let countryIndex = Math.floor(Math.random() * (countriesLength - 1) + 1)
       this.countryInfo = this.countries[countryIndex]
-      let { data } = await this.getTopNews(this.countries[countryIndex].value)
+      let { data } = await this.getNews(this.countries[countryIndex].value)
       this.articles = data.articles
     },
   },

@@ -2,19 +2,19 @@
   <header class="header">
     <div class="logo">
       <div class="logo__container">
-        <img src="../assets/logo.png" alt="News app logo" class="logo__image" />
+        <img src="../assets/icon.png" alt="News app logo" class="logo__image" />
       </div>
-      <h1>News App</h1>
+      <h2>News</h2>
     </div>
     <nav class="nav">
       <h4 class="nav__link">
         <router-link to="/home">Home</router-link>
       </h4>
       <h4 class="nav__link">
-        <router-link to="/top-news">Top News</router-link>
+        <router-link to="/top-news">Headlines</router-link>
       </h4>
       <h4 class="nav__link">
-        <router-link to="/categories">News By Category</router-link>
+        <router-link to="/categories">Category</router-link>
       </h4>
     </nav>
   </header>
@@ -40,6 +40,7 @@ export default {
 .logo__container {
   width: 50px;
   height: 50px;
+  margin-right: 4px;
 }
 .logo__image {
   max-width: 100%;
@@ -48,7 +49,8 @@ export default {
 .nav {
   display: flex;
   flex-wrap: wrap;
-  width: 350px;
+  width: 400px;
   justify-content: space-between;
+  margin: 0 auto;
 }
 </style>
