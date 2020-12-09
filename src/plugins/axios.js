@@ -1,5 +1,5 @@
 // axios set up below - used to make HTTP request
-require("dotenv").config()
+// require("dotenv").config();
 import axios from "axios"
 let baseURL = `https://newsapi.org/v2`
 let apiKey = process.env.VUE_APP_API_KEY

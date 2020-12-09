@@ -36,7 +36,7 @@ export default {
         rootMargin: "0px",
         threshold: 0.1,
       }
-      const fetchImage = url => {
+      const fetchImage = (url) => {
         return new Promise((resolve, reject) => {
           const image = new Image()
           image.src = url
@@ -44,21 +44,21 @@ export default {
           image.onerror = reject
         })
       }
-      const loadImage = image => {
+      const loadImage = (image) => {
         const src = image.dataset.src
         fetchImage(src).then(() => {
           image.src = src
         })
       }
-      const handleIntersection = entries => {
-        entries.forEach(entry => {
+      const handleIntersection = (entries) => {
+        entries.forEach((entry) => {
           if (entry.intersectionRatio > 0) {
             loadImage(entry.target)
           }
         })
       }
       const observer = new IntersectionObserver(handleIntersection, options)
-      images.forEach(img => {
+      images.forEach((img) => {
         observer.observe(img)
       })
     },
